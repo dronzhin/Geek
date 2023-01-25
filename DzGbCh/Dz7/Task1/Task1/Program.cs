@@ -49,8 +49,10 @@ namespace Task1
             //5 9 2 3
             //8 4 2 4
             //Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
             Console.WriteLine();
             Methods.AverageRowColumn2Array(userArray2, column: 1);
+            Console.WriteLine();
 
         }
     }
