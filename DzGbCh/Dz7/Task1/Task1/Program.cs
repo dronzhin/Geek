@@ -18,7 +18,7 @@ namespace Task1
 
             int line = Methods.GetValue("Введите количество строк массива");
             int column = Methods.GetValue("Введите количество столбцов массива");
-            double[,] userArray1 = Methods.CreateRandomTwoDimensionalArray(line, column, max: 10, min: -10);
+            double[,] userArray1 = Methods.CreateRandom2Array(line, column, max: 10.0, min: -10);
             Methods.PrintTwoDimensionalArray(userArray1);
 
             //Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
@@ -29,7 +29,7 @@ namespace Task1
             //17->такого числа в массиве нет
 
             Console.WriteLine();
-            double[,] userArray2 = Methods.CreateRandomTwoDimensionalArray(line, column, max: 10, min: 1, valueRound: 0);
+            double[,] userArray2 = Methods.CreateRandom2Array(line, column, max: 10.0, min: 1, valueRound: 0);
             Methods.PrintTwoDimensionalArray(userArray2);
             double findNumber = Methods.GetValue("Введите число, которое хотите найти в массиве");
             double result = Methods.FindValueTwoDimensionalArray(userArray2, findNumber);
