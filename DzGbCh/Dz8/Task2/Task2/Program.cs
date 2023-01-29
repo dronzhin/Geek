@@ -11,48 +11,14 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            int row = 10;
-            int col = 10;
-            int i = 0;
-            int j = 0;
-            int count = 0;
-            int[,] array = new int[row, col];
-            array[0, 0] = 1;
-            for (; j < col-1; j++)
-            {
-                array[i, j + 1] = array[i, j] + 1;
-            }
-            row -= 1;
-            while (true)
-            {
-                for (; i < row; i++)
-                {
-                    array[i + 1, j] = array[i, j] + 1;
-                }
-                if (array[i, j - 1] != 0) break;
+            //Задача 62.Напишите программу, которая заполнит спирально массив 4 на 4.
+            //Например, на выходе получается вот такой массив:
+            //01 02 03 04
+            //12 13 14 05
+            //11 16 15 06
+            //10 09 08 07
 
-                for (; j > 9 - row + count; j--)
-                {
-                    array[i, j - 1] = array[i, j] + 1;
-                }
-                if (array[i - 1, j] != 0) break;
-                row -= 1;
-
-                for (; i > 9 - row; i--)
-                {
-                    array[i - 1, j] = array[i, j] + 1;
-                }
-                if (array[i, j + 1] != 0) break;
-                
-                for (; j < row; j++)
-                {
-                    array[i, j + 1] = array[i, j] + 1;
-                }
-                if (array[i + 1, j] != 0) break;
-            }
-            Methods.PrintTwoDimensionalArray(array);
-            Console.WriteLine();
-            
+            MethodsDZ.ShowFunnelOfNumbers(row: 10, column: 10); 
         }
     }
 }
