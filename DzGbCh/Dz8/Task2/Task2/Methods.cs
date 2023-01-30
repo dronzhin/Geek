@@ -14,11 +14,21 @@ namespace Task1
             Console.Write(message + " : ");
             return int.Parse(Console.ReadLine());
         }
-        public static double[,] CreateRandom2Array(int line, int column, double max = 100, double min = 0, int valueRound = 1)
+        public static int[] CreateRandomArray(int row, int max = 100, int min = 0)
         {
             Random random = new Random();
-            double[,] array = new double[line, column];
-            for (int i = 0; i < line; i++)
+            int[] array = new int[row];
+            for (int i = 0; i < row; i++)
+            {
+                    array[i] = random.Next(min, max);
+            }
+            return array;
+        }
+        public static double[,] CreateRandom2Array(int row, int column, double max = 100, double min = 0, int valueRound = 1)
+        {
+            Random random = new Random();
+            double[,] array = new double[row, column];
+            for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < column; j++)
                 {
@@ -27,11 +37,11 @@ namespace Task1
             }
             return array;
         }
-        public static int[,] CreateRandom2Array(int line, int column, int max = 100, int min = 0)
+        public static int[,] CreateRandom2Array(int row, int column, int max = 100, int min = 0)
         {
             Random random = new Random();
-            int[,] array = new int[line, column];
-            for (int i = 0; i < line; i++)
+            int[,] array = new int[row, column];
+            for (int i = 0; i < row; i++)
             {
                 for (int j = 0; j < column; j++)
                 {
@@ -40,8 +50,70 @@ namespace Task1
             }
             return array;
         }
+        public static int[,,] CreateRandom3Array(int row, int column, int list, int max = 100, int min = 0)
+        {
+            Random random = new Random();
+            int[,,] array = new int[row, column, list];
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < column; j++)
+                {
+                    for (int k = 0; k < list; k++)
+                    {
+                        array[i, j, k] = random.Next(min, max);
+                    }
+                }
+            }
+            return array;
+        }
+        public static int[,,] CreateUniqueRandom3Array(int row, int column, int list, int max = 100, int min = 0)
+        {
+            Random random = new Random();
+            int[,,] array = new int[row, column, list];
+            int[] randomArray = null;
+            int length = row * column * list;
+            while (true)
+            {
+                randomArray = CreateRandomArray(length * 5, max, min);
+                randomArray = randomArray.Distinct().ToArray();
+                if (randomArray.Length > length)
+                {
+                    break;
+                }
+            }
+            for (int i = 1; i <= row; i++)
+            {
+                for (int j = 1; j <= column; j++)
+                {
+                    for (int k = 1; k <= list; k++)
+                    {
+                        array[i - 1, j - 1, k - 1] = randomArray[(i * j * k) - 1];
+                    }
+                }
+            }
+            return array;
+        }
+        public static void Print3Array<T>(T[,,] array)
+        {
+            int row = array.GetLength(0);
+            int column = array.GetLength(1);
+            int list = array.GetLength(2);
+            for (int i = 0; i < row; i++)
+            {
+                Console.WriteLine("Плоскость - " + (i + 1));
+                for (int j = 0; j < column; j++)
+                {
+                    for (int k = 0; k < list; k++)
+                    {
+                        Console.Write(array[i, j, k] + "\t");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+            }
+        }
 
-        public static void PrintTwoDimensionalArray<T>(T[,] array)
+        public static void Print2Array<T>(T[,] array)
         {
             int line = array.GetLength(0);
             int column = array.GetLength(1);
@@ -55,6 +127,16 @@ namespace Task1
                 Console.WriteLine();
             }
         }
+
+        public static void PrintArray<T>(T[] array)
+        {
+            int length = array.Length;
+            for (int i = 0; i < length; i++)
+            {
+                    Console.Write(array[i] + "\t");
+            }
+        }
+
         /// <summary>
         /// Метод проверяет, есть ли число в массиве
         /// </summary>
