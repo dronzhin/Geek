@@ -30,8 +30,6 @@ namespace dz9
             int m = 2;
             int n = 3;
             Console.WriteLine($"A({m}, {n}) = " + MethodsDZ.FunAccerman(3,2));
-
-
         }
     }
 }
