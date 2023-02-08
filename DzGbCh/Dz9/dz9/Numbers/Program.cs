@@ -15,6 +15,7 @@ namespace Numbers
             result = Method.SplitString(result, ref summ);
             Console.WriteLine($"Сумма равна {summ}");
             Console.WriteLine(result);
+            Console.WriteLine();
         }
     }
 }
