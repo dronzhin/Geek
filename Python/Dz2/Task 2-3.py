@@ -1,5 +1,4 @@
-from Dz2 import MyFunction
-
+import MyFunction
 userNumber = MyFunction.InputNumber()
 answer = ""
 number = 2
