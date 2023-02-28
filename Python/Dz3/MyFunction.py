@@ -5,3 +5,7 @@ def InputNumber(request = "Введите число: "):
             break
         answer = input(request)
     return int(answer)
+
+def AddNumbersInList(list = [], count = 0):
+    for i in range(count):
+        list.append(InputNumber("Введите число в массив - "))

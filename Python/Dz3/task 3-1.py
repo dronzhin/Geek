@@ -9,9 +9,8 @@
 
 import MyFunction
 
-lengthOfArray = MyFunction.InputNumber("Введите длину массива - ")
-myArray = []
-for i in range(lengthOfArray):
-    myArray.append(MyFunction.InputNumber("Введите число в массив - "))
+lengthOfList = MyFunction.InputNumber("Введите длину массива - ")
+myList = []
+MyFunction.AddNumbersInList(myList, lengthOfList)
 findNumber = MyFunction.InputNumber("Введите число для поиска - ")
-print(f"Число {findNumber} встречает {myArray.count(findNumber)} раз(а)")
+print(f"Число {findNumber} встречает {myList.count(findNumber)} раз(а)")
