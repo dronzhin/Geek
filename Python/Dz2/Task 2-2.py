@@ -2,8 +2,13 @@ summTwoNumbers = int(input("Введите сумму чисел: "))
 multiplicationTwoNumbers = int(input("Введите произведение двух чисел: "))
 answer1 = 0
 answer2 = 0
-for i in range(1, summTwoNumbers):
-    for j in range(1, summTwoNumbers):
+maxValue = 0
+if summTwoNumbers > 1000:
+    maxValue = 1000
+else:
+    maxValue = summTwoNumbers
+for i in range(1, maxValue):
+    for j in range(1, maxValue):
         if i + j == summTwoNumbers and i * j == multiplicationTwoNumbers:
             answer1 = i
             answer2 = j
