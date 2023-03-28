@@ -1,4 +1,4 @@
-package Metods;
+package DZ1.Metods;
 
 import java.util.Scanner;
 
