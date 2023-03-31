@@ -17,7 +17,14 @@ public class Task2 {
         }
         for (int i = 0; i < newArray.length; i++) {
             String[] arrayWord = newArray[i].trim().split(" ");
-            System.out.println("Студент " + arrayWord[1] + " получил " + arrayWord[3] + " по предмету " + arrayWord[5]);
+            StringBuilder ourResult = new StringBuilder();
+            ourResult.append("Студент ");
+            ourResult.append(arrayWord[1]);
+            ourResult.append(" получил ");
+            ourResult.append(arrayWord[3]);
+            ourResult.append(" по предмету ");
+            ourResult.append(arrayWord[5]);
+            System.out.println(ourResult.toString());
         }
 
 
