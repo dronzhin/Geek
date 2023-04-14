@@ -32,6 +32,10 @@ public class Main {
                 LaptopMetods.showLaptops(laptops);
             } else if (answer == 3) {
                 LaptopMetods.filterLaptop(laptops);
+            } else if (answer == 4) {
+                notExit = false;
+            } else {
+                System.out.println("Введена неверная команда");
             }
         }
 
