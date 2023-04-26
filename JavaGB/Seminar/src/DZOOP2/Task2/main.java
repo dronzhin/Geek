@@ -18,6 +18,7 @@ public class main {
         warrior.showInfo();
         paladin.healing(warrior, 50);
         warrior.showInfo();
+        paladin.showInfo();
 
 
     }

@@ -1,4 +1,4 @@
-package DZ4.Metods;
+package DZOOP3;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -32,10 +32,10 @@ public class MyFunction {
         scanner.close();
         return data;
     }
-    public static void printArray(int[] arr){
-        for (int a : arr) {
-            System.out.printf("%d\t", a);
+    public static <E> void printArray(E[] arraw){
+        for (E arr: arraw) {
+            System.out.println(arr);
         }
-        System.out.println();
     }
+
 }
