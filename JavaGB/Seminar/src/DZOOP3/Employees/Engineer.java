@@ -4,8 +4,8 @@ import DZOOP3.Employee;
 
 public class Engineer extends Employee {
 
-    public Engineer(String firstName, String surName, double salary) {
-        super(firstName, surName, salary);
+    public Engineer(String firstName, String surName, double salary, int age) {
+        super(firstName, surName, salary, age);
     }
     private static final int minSalary = 50000;
     private static final int maxSalary = 120000;
@@ -19,8 +19,8 @@ public class Engineer extends Employee {
 
     @Override
     public String toString() {
-        return String.format("%s %s; Инженер; Среднемесячная заработная плата: %.2f рублей.",
-                surName, firstName, calculateSalary());
+        return String.format("%s %s; Инженер;  возраст %d;  Среднемесячная заработная плата: %.2f рублей.",
+                surName, firstName, age, calculateSalary());
     }
     @Override
     public int getMinSalary() {

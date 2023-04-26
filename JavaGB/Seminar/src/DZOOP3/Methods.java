@@ -18,8 +18,9 @@ public class Methods {
 
         int salary = random.nextInt(900, 1500);
         int salaryIndex = random.nextInt(28, 31);
+        int age = random.nextInt(20, 60);
 
-        return new Worker(names[random.nextInt(10)], surnames[random.nextInt(10)],salary * salaryIndex );
+        return new Worker(names[random.nextInt(10)], surnames[random.nextInt(10)],salary * salaryIndex, age);
 
     }
     public static Employee newGenerateEmployee(){
@@ -30,17 +31,18 @@ public class Methods {
         int speciality = random.nextInt(5);
         int salary = random.nextInt(600, 2000);
         int salaryIndex = random.nextInt(20, 60);
+        int age = random.nextInt(20, 60);
 
         if(speciality == 0) {
-            result = new Designer(names[random.nextInt(10)], surnames[random.nextInt(10)],salary);
+            result = new Designer(names[random.nextInt(10)], surnames[random.nextInt(10)],salary, age);
         } else if (speciality == 1) {
-            result = new Programmer(names[random.nextInt(10)], surnames[random.nextInt(10)],salary);
+            result = new Programmer(names[random.nextInt(10)], surnames[random.nextInt(10)],salary, age);
         } else if (speciality == 2) {
-            result = new Worker(names[random.nextInt(10)], surnames[random.nextInt(10)],salary * salaryIndex );
+            result = new Worker(names[random.nextInt(10)], surnames[random.nextInt(10)],salary * salaryIndex, age);
         } else if (speciality == 3) {
-            result = new Economist(names[random.nextInt(10)], surnames[random.nextInt(10)],salary * salaryIndex );
+            result = new Economist(names[random.nextInt(10)], surnames[random.nextInt(10)],salary * salaryIndex, age);
         } else {
-            result = new Engineer(names[random.nextInt(10)], surnames[random.nextInt(10)], salary * salaryIndex);
+            result = new Engineer(names[random.nextInt(10)], surnames[random.nextInt(10)], salary * salaryIndex, age);
         }
         return result;
     }

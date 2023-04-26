@@ -5,6 +5,7 @@ import DZOOP3.Employees.Programmer;
 import DZOOP3.Employees.Worker;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 import static DZOOP3.Methods.*;
 
@@ -19,6 +20,6 @@ public class main {
         Arrays.stream(employees).filter(x -> x.calculateSalary() > 50000).sorted().forEach(System.out::println);
         System.out.println("----------");
         Arrays.stream(employees).filter(x -> x instanceof Programmer || x instanceof Economist).
-                sorted((x1,x2)-> Integer.compare(x1.getMinSalary(), x2.getMinSalary())).forEach(System.out::println);
+                sorted(Comparator.comparingInt(Employee::getAge)).forEach(System.out::println);
     }
 }
