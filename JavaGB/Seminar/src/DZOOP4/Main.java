@@ -54,5 +54,7 @@ public class Main {
         System.out.println();
         System.out.println((boxOrange.getWieght() > boxApple.getWieght())? "Коробка апельсинов тяжелее":
                 (boxOrange.getWieght() < boxApple.getWieght())? "Коробка яблок тяжелее": "Коробки равны");
+        System.out.println();
+        newBoxApple.showBox();
     }
 }
