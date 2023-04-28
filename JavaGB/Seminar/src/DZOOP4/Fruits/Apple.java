@@ -9,6 +9,6 @@ public class Apple extends Fruit {
 
     @Override
     public void showFruit() {
-        System.out.printf("Яблоко весом %.1f кг.\n", weight);
+        System.out.printf("Яблоко весом %.2f кг.\n", weight);
     }
 }

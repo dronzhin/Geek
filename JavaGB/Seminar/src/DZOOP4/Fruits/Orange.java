@@ -8,6 +8,6 @@ public class Orange extends Fruit {
     }
     @Override
     public void showFruit() {
-        System.out.printf("Апельсин весом %.1f кг.\n", weight);
+        System.out.printf("Апельсин весом %.2f кг.\n", weight);
     }
 }

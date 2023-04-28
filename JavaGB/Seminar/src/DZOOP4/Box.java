@@ -25,6 +25,7 @@ public class Box <T extends Fruit>{
         if(Wieght + box.getWieght() <= maxWieght) {
             fruits.addAll(box.fruits);
             Wieght = Wieght + box.getWieght();
+            System.out.printf("Добавили с другой коробки %d фрукта весом %.2f кг.\n", box.fruits.size(), box.Wieght);
         } else {
             System.out.println("В это коробке нет места для данного фрукта");
         }
@@ -37,6 +38,6 @@ public class Box <T extends Fruit>{
         for (int i = 0; i < fruits.size(); i++) {
             fruits.get(i).showFruit();
         }
-        System.out.printf("Общий вес коробки - %.1f кг\n", Wieght);
+        System.out.printf("Общий вес коробки - %.2f кг\n", Wieght);
     }
 }

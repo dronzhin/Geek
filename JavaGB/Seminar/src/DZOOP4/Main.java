@@ -49,6 +49,7 @@ public class Main {
             newBoxApple.addFruit(new Apple(randomWiegth));
         }
         boxApple.addBox(newBoxApple);
+        System.out.println();
         boxApple.showBox();
         System.out.println();
         System.out.println((boxOrange.getWieght() > boxApple.getWieght())? "Коробка апельсинов тяжелее":
